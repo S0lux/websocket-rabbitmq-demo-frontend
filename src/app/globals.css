@@ -25,3 +25,11 @@ body {
     text-wrap: balance;
   }
 }
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
