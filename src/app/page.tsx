@@ -132,11 +132,14 @@ export default function Home() {
           className="border-black/40"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSubmit();
+          }}
         />
 
         <button
           disabled={!input}
-          className="flex items-center justify-center bg-blue-500 aspect-square rounded-md disabled:opacity-50"
+          className="flex items-center justify-center bg-blue-500 min-w-8 min-h-8 aspect-square rounded-md disabled:opacity-50"
           onClick={handleSubmit}
         >
           <Send size={20} color={"white"} />

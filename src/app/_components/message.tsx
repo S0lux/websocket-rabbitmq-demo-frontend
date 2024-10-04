@@ -34,7 +34,7 @@ export const Message = ({
 
   if (type === "user") {
     return (
-      <div className={cn("flex gap-2 items-center", className)}>
+      <div className={cn("flex gap-2 items-center w-full", className)}>
         <img
           src={`https://api.dicebear.com/9.x/thumbs/svg?seed=${name}`}
           className="h-full aspect-square rounded-md select-none"
@@ -45,7 +45,7 @@ export const Message = ({
             <p className="font-bold">{name}</p>
             <p className="text-xs opacity-50">{currentTime}</p>
           </div>
-          <p className="text-sm">{content}</p>
+          <p className="text-sm text-wrap">{content}</p>
         </div>
       </div>
     );
