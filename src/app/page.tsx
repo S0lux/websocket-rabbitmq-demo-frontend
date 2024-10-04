@@ -84,18 +84,18 @@ export default function Home() {
     }
   };
 
-  // if (!socket) {
-  //   return (
-  //     <div className="flex gap-8 flex-col w-full h-full items-center justify-center">
-  //       <TeamSribeLogo />
-  //       <JoinRoomForm
-  //         setSocket={(socket: Socket) => setSocket(socket)}
-  //         setRoom={(room: string) => setRoom(room)}
-  //         className="max-w-64"
-  //       />
-  //     </div>
-  //   );
-  // }
+  if (!socket) {
+    return (
+      <div className="flex gap-8 flex-col w-full h-full items-center justify-center">
+        <TeamSribeLogo />
+        <JoinRoomForm
+          setSocket={(socket: Socket) => setSocket(socket)}
+          setRoom={(room: string) => setRoom(room)}
+          className="max-w-64"
+        />
+      </div>
+    );
+  }
 
   function handleSubmit() {
     if (input) {
