@@ -34,10 +34,10 @@ export const Message = ({
 
   if (type === "user") {
     return (
-      <div className={cn("flex gap-2 items-center w-full", className)}>
+      <div className={cn("flex gap-2 w-full", className)}>
         <img
           src={`https://api.dicebear.com/9.x/thumbs/svg?seed=${name}`}
-          className="h-full aspect-square rounded-md select-none"
+          className="h-12 aspect-square rounded-md select-none"
           alt={`${name}'s avatar`}
         />
         <div className="flex flex-col">

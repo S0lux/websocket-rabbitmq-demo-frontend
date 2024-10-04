@@ -84,18 +84,18 @@ export default function Home() {
     }
   };
 
-  if (!socket) {
-    return (
-      <div className="flex gap-8 flex-col w-full h-full items-center justify-center">
-        <TeamSribeLogo />
-        <JoinRoomForm
-          setSocket={(socket: Socket) => setSocket(socket)}
-          setRoom={(room: string) => setRoom(room)}
-          className="max-w-64"
-        />
-      </div>
-    );
-  }
+  // if (!socket) {
+  //   return (
+  //     <div className="flex gap-8 flex-col w-full h-full items-center justify-center">
+  //       <TeamSribeLogo />
+  //       <JoinRoomForm
+  //         setSocket={(socket: Socket) => setSocket(socket)}
+  //         setRoom={(room: string) => setRoom(room)}
+  //         className="max-w-64"
+  //       />
+  //     </div>
+  //   );
+  // }
 
   function handleSubmit() {
     if (input) {
@@ -122,7 +122,7 @@ export default function Home() {
         className="flex flex-col p-4 gap-4 border border-black/40 rounded-md flex-1 w-[85%] lg:w-[50%] overflow-scroll"
       >
         {messages.map((message, i) => (
-          <Message className="h-12" key={i} {...message} />
+          <Message className="break-all mb-5" key={i} {...message} />
         ))}
         <div ref={messagesEndRef} />
       </div>
